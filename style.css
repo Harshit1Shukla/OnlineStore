@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    background:#ffe2bd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#so{
+    background: #ffd6a1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border-color: #00129d;
+    color: #644217;
+    cursor: pointer;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    color: #000000;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #00129d; 
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 70%;
+    height: 5px;
+    background: #000968; 
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+}
+
+#login_btn{
+    background-color: rgb(255, 204, 0);
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/*home page*/
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    background:#ffe2bd;
+}
+#main img{
+    float: right;
+}
+#main h1{
+    font-weight: bold;
+}
+#main button{
+    display: inline-block;
+    background: #b07e00;
+    color: #fff;
+    padding: 8px 30px ;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s ;
+}
+#main button:hover{
+    background-color: #684000;
+}
+
+
+.section-p1{
+    padding: 40px 80px;
+}
+#product1{
+    text-align: center;
+    background-color: rgb(255, 249, 245);
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 5px 6px;
+    border: 1px solid #9f9d87;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    background-color: rgb(255, 252, 249);
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+#product1 .pro img{
+    width: 80%;
+    border-radius: 7px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #323233;
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #6c7158;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #000755;
+    margin-top: auto;
+}
+footer .column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    color: rgb(220, 220, 220);
+    font-size: 13px;
+}
+footer .logo{
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer li{
+    list-style: none;
+}
+footer .copyright{
+    color: #c1c1c1;
+}
+
+
+
+/* shop page */
+
+#s-header{
+    background-image: url("img/banner/b1.jpg");
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 15px;
+}
+#s-header h2,
+#s-header p{
+    color: #ffffff;
+}
+#pagination{
+    text-align: center;
+}
+#pagination a{
+    text-decoration: none;
+    background-color: rgb(120, 94, 0);
+    padding: 15px 20px;
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+#pagination i{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* single product */
+
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 0%;
+}
+
+#prodetails .s-pro-imgs{
+    width: 40%;
+    margin-right: 50px;
+}
+.small-img-set{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-row{
+    flex-basis: 49%;
+    cursor: pointer;
+}
+
+#prodetails .s-pro-details{
+    width: 50%;
+    padding: 30px;
+}
+#prodetails .s-pro-details h4{
+    padding: 40px 0 30px 0;
+}
+#prodetails .s-pro-details h2{
+    font-size: 25px;
+}
+#prodetails .s-pro-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#prodetails .s-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#prodetails .s-pro-details .b-style{
+    background-color: rgb(255, 205, 158);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 8px;
+    border-style: none;
+}
+#prodetails .s-pro-details span{
+    line-height: 25px;
+}
+
+/* contact */
+#contact{
+    background-color: #739fff39;
+}
+
+/* cart page */
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img{
+    width: 75px;
+}
+#cart table td:nth-child(1){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(3),
+#cart table td:nth-child(4),
+#cart table td:nth-child(5){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(6){
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(4) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+    border: 1px solid #381900;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 15px 0;
+}
+#cart table tbody tr td{
+    padding-top: 15px;
+}
